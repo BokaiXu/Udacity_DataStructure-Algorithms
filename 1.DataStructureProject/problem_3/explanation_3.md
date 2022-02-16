@@ -1,0 +1,8 @@
+For this question, I follow the logic of hoffman coding visualization (https://cmps-people.ok.ubc.ca/ylucet/DS/Huffman.html).
+Firstly, I write the priority queue class to store the tree nodes. Then I write the tree class for building the Huffman coding tree.
+I write several helper functions to finish the encoding and decoding.
+count_freq() is used to convert the string to a dictionary that stores each character and the frequency. Time and space Complexity is O(n).
+Tree_generator() is used to generate the Huffman coding tree using the logic in the link (https://cmps-people.ok.ubc.ca/ylucet/DS/Huffman.html). In this function, while traverse the priority queue, every time I have to insert the value of the (left-node+right-node) as a new node back to the priority queue. Since I have to compare the value of the new node with the nodes in the queue,the time complexity should be O(n*n). The space complexity should be O(n).
+The encoder() function is used to recursively go through the Huffman coding tree and build the dictionary that stores the character in the string and the realted 0-1 information. The time and space complexity for this recursion is O(n).
+The huffman_encoding() function call the helper functions.
+The huffman_decoding() function traverse the encoded data and traverse the Huffman tree for each character in the encoded data. Hence the time compleixty should be O(n*n). The space complexity should be O(len(encoded_data)+len(decoded_data)+len(Huffman_tree)).

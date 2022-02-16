@@ -1,0 +1,5 @@
+To get O(1) in get() function and put/set() function of the LRU_Cache, we need to use hash map/python dictionary.
+Since the oldest element needed to be deleted firstly, it reminds me a queue.    
+I will use a double linked list to save the values. A head pointer is used to delete the head.next (oldest element). The tail pointer is used to insert the tail.prev (latest element).    
+The only problem for using double linked list is how can I find the node of element I need in O(1) for the get methond. To solve this issue, I will use hash map to save the key, and save the related value as a Node(eg: dict[key]=Node(value)).    
+Using hash map, I can find the node I need in O(1). When I delete the oldest node, I also need to delete the related key from the hashmap. To get the key from related node, I also need to store the key in the node(eg: dict[key]=Node(key,value)).    

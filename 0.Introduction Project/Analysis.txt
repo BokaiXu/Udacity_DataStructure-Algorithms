@@ -1,0 +1,30 @@
+task0:
+the time complexity of task_0 function is O(1) since it only read one line of each the dataset.
+
+task1:
+Since I used two sequential for loop. The time complexity is O(2n+2n)=O(4n).
+The set I used is like a hash table. So I can expect to lookup/insert/delete in O(1) average. Unless the hash table's load factor is too high, then I face collisions and O(n).
+For the worst scenario, the time complexity of the task1 function is O(4n+n)=O(n).
+
+task2:
+I used one for loop, the time complexity is O(2n)=O(n).
+The sort function I used is a Timsort algorithm, the worst case time complexity is O(nlogn).
+Hence the worst scenario time complexity for task_2 is O(nlogn).
+
+
+task3:
+I firstly used a for loop, then used a set. The worst scenario time complexity for this part is O(n+n)=O(n).
+Next I used another for loop with 3 if statement, the worst scenario time complexity is O(6n)=O(n).
+Next I used a set in a sorted function, which should have the worst scenario time complexity of O(n+n*logn)=O(n*logn).
+Next I used a for loop, which has the worst scenario time complexity of O(n).
+For the second part of the question, I used two sequential for loop. The worst scenario time complexity should be O(2n)=O(n).
+In conclusion, the worst scenario time complexity of task_3 is O(n*logn).
+
+task4:
+I used two for loops and a set firstly. The worst scenario time complexity is O(2n+n+n)=O(n).
+Then I used another for loop and set. The worst scenario time complexity is O(n+n)=O(n).
+Then I used another for loop and compared whether an element is in the other list. The worst scenario time complexity for this part should be O(n^2). 
+Then I used another sorted function. The worst scenario time complexity is O(n*logn).
+Finally, I used another for loop and the worst scenario time complexity is O(n).
+Based on the analysis, the worst scenario time complexity for task4 is O(n^2).
+
